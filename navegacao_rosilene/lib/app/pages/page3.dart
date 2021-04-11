@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:navegacao_rosilene/app/pages/page1.dart';
 
 class Page3 extends StatelessWidget {
@@ -8,36 +9,28 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 3'),
+        title: Text('Página 03'),
         centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Page 3'),
+            Text('PÁGINA 03'),
+            const SizedBox(
+              height: 20.0,
+            ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => Page1(),
                   ),
                 );
               },
-              child: Text('Vai para página 1'),
+              child: Text(' Página 01'),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.popUntil(context, (route) => route.isFirst);
-
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => Page1()),
-                );
-              },
-              child: Text('Vai para página 1 e fecha todas anteriores'),
-            )
           ],
         ),
       ),

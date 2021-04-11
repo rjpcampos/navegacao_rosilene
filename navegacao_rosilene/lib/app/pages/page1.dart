@@ -22,7 +22,7 @@ class Page1 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Página 01'),
+              Text('PÁGINA 01'),
               const SizedBox(
                 height: 20.0,
               ),
@@ -35,7 +35,7 @@ class Page1 extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('Ir para página 02'),
+                child: Text('Página 02 >>'),
               ),
             ],
           ),
