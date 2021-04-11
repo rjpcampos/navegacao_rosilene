@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navegacao_rosilene/app/pages/page1.dart';
+import 'package:navegacao_rosilene/app/pages/page4.dart';
 import 'package:navegacao_rosilene/app/pages/page2.dart';
 
 class Page3 extends StatelessWidget {
@@ -32,18 +32,18 @@ class Page3 extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text('< Página 02'),
+                  child: Text('< Página 2'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => Page1(),
+                        builder: (context) => Page4(),
                       ),
                     );
                   },
-                  child: Text('<< Página 01'),
+                  child: Text('Página 4 >'),
                 ),
               ],
             ),
