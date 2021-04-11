@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'pages/page1.dart';
+import 'package:navegacao_rosilene/app/pages/page1.dart';
+import 'package:navegacao_rosilene/app/pages/page2.dart';
+import 'package:navegacao_rosilene/app/pages/page3.dart';
+import 'package:navegacao_rosilene/app/pages/page4.dart';
 
 class App extends StatelessWidget {
   @override
@@ -10,7 +12,13 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Page1(),
+      initialRoute: '/page1',
+      routes: {
+        '/page1': (context) => Page1(),
+        '/page2': (context) => Page2(),
+        '/page3': (context) => Page3(),
+        '/page4': (context) => Page4(),
+      },
     );
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navegacao_rosilene/app/pages/page3.dart';
-import 'package:navegacao_rosilene/app/pages/page1.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({Key key}) : super(key: key);
@@ -25,23 +23,13 @@ class Page2 extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pop();
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Page1(),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, '/page1');
                   },
                   child: Text('< Página 1'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pop();
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => Page3(),
-                      ),
-                    );
+                    Navigator.pushReplacementNamed(context, '/page3');
                   },
                   child: Text('Página 3 >'),
                 ),
