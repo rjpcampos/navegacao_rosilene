@@ -5,6 +5,7 @@ class Page2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String args = ModalRoute.of(context).settings.arguments ?? '';
     return Scaffold(
       appBar: AppBar(
         title: Text('Página 02'),
@@ -14,22 +15,24 @@ class Page2 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('VOCÊ ESTÁ NA PÁGINA 02'),
+            Text(args),
             const SizedBox(
-              height: 20.0,
+              height: 70.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/page1');
+                    Navigator.pushReplacementNamed(context, '/page1',
+                        arguments: 'VOCÊ ESTÁ NA PÁGINA 01');
                   },
                   child: Text('< Página 1'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/page3');
+                    Navigator.pushReplacementNamed(context, '/page3',
+                        arguments: 'VOCÊ ESTÁ NA PÁGINA 03');
                   },
                   child: Text('Página 3 >'),
                 ),

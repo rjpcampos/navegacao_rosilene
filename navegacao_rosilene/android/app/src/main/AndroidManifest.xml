@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.empresafake.navegacao_rosilene.navegacao_rosilene">
+    package="br.com.empresafake.navegacao_rosilene">
    <application
         android:label="navegacao_rosilene"
         android:icon="@mipmap/ic_launcher">

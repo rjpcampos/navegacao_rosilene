@@ -23,14 +23,15 @@ class Page1 extends StatelessWidget {
             children: [
               Text('VOCÊ ESTÁ NA PÁGINA 01'),
               const SizedBox(
-                height: 20.0,
+                height: 70.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/page2');
+                      Navigator.pushReplacementNamed(context, '/page2',
+                          arguments: 'VOCÊ ESTÁ NA PÁGINA 02');
                     },
                     child: Text('Página 2 >'),
                   ),
